@@ -74,18 +74,26 @@ class Response
 
 // so the base path is /sucker
 // TODO: And I Want To Set
+
+global $client;
+
+function GetClient()
+{
+    if (isset($client)){return $client;}
+    else{
+        $client= new PDO("mysql:host=localhost;dbname=sucker", "sucker", "sucker");
+        return $client;
+    }
+}
+
+
+
 class Sucker
 {
-    public $db;
 
-    function __construct()
+   static public function Show()
     {
-        $this->db = new PDO("mysql:host=localhost;dbname=sucker", "sucker", "sucker");
-    }
-
-    public function Show()
-    {
-        $records = $this->db->query("select 1 from posts")->fetchAll();
+        $records = GetClient()->query("select 1 from posts")->fetchAll();
         $count = count($records);
         echo "We have $count records in db;";
 
