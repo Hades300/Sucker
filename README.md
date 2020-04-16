@@ -36,3 +36,4 @@ web应用开发小作业，舔狗日记,后端一小时前端一整天。前端�
 ### ScreenShot
 
 ![sucker](http://q8ptr9gz2.bkt.clouddn.com/sucker.gif)
+被Github缓存了之后好像不会动了... 这里[七牛云](http://q8ptr9gz2.bkt.clouddn.com/sucker.gif)
